@@ -31,7 +31,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - run: curl -H "x-api-key: ${{secrets.AMARILLO_KEY}}" https://amarillo.mobidata-bw.de/region/bw/gtfs > amarillo-bw.zip
+      - run: 'curl -H "x-api-key: ${{secrets.AMARILLO_KEY}}" https://amarillo.mobidata-bw.de/region/bw/gtfs > amarillo-bw.zip'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
